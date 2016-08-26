@@ -69,7 +69,7 @@ tidy_data_aggregated<-melt(tidy_data_bind,id.vars=c("activity_label","subject_id
 tidy_data_final<-dcast(tidy_data_aggregated,activity_label+subject_id~variable,mean)
 
 # Write the tidy data set to a text file.
-write.table(tidy_data_final,"./data/tidy_data_subject_activity_by_variable",row.names=FALSE)
+write.table(tidy_data_final,"./data/tidy_data_subject_activity_by_variable.txt",row.names=FALSE)
 
 
 
